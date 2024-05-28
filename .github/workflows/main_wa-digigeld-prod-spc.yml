@@ -24,6 +24,7 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install -g npm@latest
+          npm install --global nx
           npm run build
           npm run test
 
