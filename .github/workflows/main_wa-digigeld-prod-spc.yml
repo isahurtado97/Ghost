@@ -23,10 +23,12 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          npm install -g npm@latest
-          npm install --global nx
-          npm run build
-          npm run test
+          #npm install -g npm@latest
+          #npm install --global nx
+          #npm run build
+          #npm run test
+          npm install ghost-cli -g
+          ghost install
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
