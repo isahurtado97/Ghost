@@ -28,6 +28,8 @@ jobs:
           #npm run build
           #npm run test
           npm install ghost-cli -g
+          mkdir ghost
+          cd ghost
           ghost install
 
       - name: Zip artifact for deployment
