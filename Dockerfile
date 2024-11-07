@@ -1,11 +1,6 @@
-# Use the official Ghost image from Docker Hub
 FROM ghost:latest
 
-# Set environment variables
-ENV NODE_ENV=production
+# Add package.json if needed, or any additional configuration
+COPY package.json /var/lib/ghost/package.json
 
-# Expose the default Ghost port
 EXPOSE 2368
-
-# Start Ghost
-CMD ["npm", "start"]
